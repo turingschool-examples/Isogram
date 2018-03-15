@@ -3,21 +3,29 @@ export default class Isogram {
     this.phrase = phrase.toLowerCase()
   }
 
-  determainIso(splitPhrase) {
-    var result = true
-    var key = {}
-    for(let i = 0; i < splitPhrase.length; i++) {
-      delete key['-'] && delete key[' ']
-      key[splitPhrase[i]] ? key[splitPhrase[i]]++ : key[splitPhrase[i]] = 1
-      if (key[splitPhrase[i]] > 1) {
-        result = false
-        break
-      }
-    }
-    return result
+  cleanPhrase(phrase) {
+    const nonValid = ['-', ' ']
+    return phrase.filter(char => nonValid.indexOf(char) > 0)
+  };
+
+  determainIso(array, key= {}, i = 0) {
+    const currentLetter = array[i]
+    key[currentLetter] = (key[currentLetter] || 0) + 1;
+
+    const notIso    = truth[currentLetter] > 1
+    const isFinshed = i >= array.length  - 1
+
+     if(notIso) {
+       return false
+     }
+
+     if(!isFinshed) {
+       return this.determainIso(array, truth, i + 1)
+     }
+     return true
   }
 
   isIsogram() {
-    return this.determainIso(this.phrase.split(''))
+    return this.determainIso(this.cleanPhrase(this.phrase.split('')))
   }
 }
