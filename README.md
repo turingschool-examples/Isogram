@@ -11,4 +11,4 @@ An isogram (also known as a "nonpattern word") is a logological term for a word 
 Basically it is a word without any repeating characters. Currently the code in
 this repository has all tests passing. The problem is that the solution isn't 
 very eleoquent. In short we can do better. Your job is to refactor the code 
-inside of the `/scripts/Isogram.js` with a passing test suite. 
+inside of the `/scripts/Isogram.js` with a passing test suite.   
