@@ -1,6 +1,4 @@
 import { expect } from 'chai';
-import filterMe from '../scripts/filter'
-
 import Isogram from '../scripts/Isogram';
 
 describe('Isogram Test Suite', function () {
