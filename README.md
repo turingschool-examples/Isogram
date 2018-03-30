@@ -3,7 +3,7 @@
 ## Setup 
 
 Run `npm install` to install dev dependencies. 
-Once you've done that you'll need to run `npm tests` to run the test suite. 
+Once you've done that you'll need to run `npm test` to run the test suite. 
 
 ## Directive 
 
